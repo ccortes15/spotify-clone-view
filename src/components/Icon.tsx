@@ -1,13 +1,14 @@
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { IconDefinition, SizeProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 interface IconProps {
-    ico: IconDefinition
+    ico: IconDefinition,
+    size: SizeProp
 }
 
 const Icon = (props: IconProps) => {
     return (
-        <FontAwesomeIcon icon={props.ico} />
+        <FontAwesomeIcon icon={props.ico} size={props.size} />
     )
 }
 

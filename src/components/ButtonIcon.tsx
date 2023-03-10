@@ -1,10 +1,22 @@
 import { IconButton } from '@chakra-ui/react'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import Icon from './Icon'
 
-const ButtonIcon = () => {
+interface ButtonIconProps {
+    ico: IconDefinition,
+    arialabel: string,
+
+}
+
+const ButtonIcon = (props: ButtonIconProps) => {
     return (
-        <IconButton aria-label='Search database' icon={<Icon ico={faSearch}/>} />
+        <IconButton
+            aria-label={props.arialabel}
+            icon={<Icon ico={props.ico} size='1x' />}
+            borderRadius='full' 
+            colorScheme='blackAlpha'
+            color='gray'
+        />
     )
 }
 

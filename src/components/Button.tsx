@@ -2,7 +2,6 @@ import { Text, Flex, Center } from '@chakra-ui/react'
 import Icon from './Icon';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
-
 interface ButtonProps {
     color: string,
     text: string,
@@ -16,16 +15,17 @@ const Button = (props: ButtonProps) => {
         <Flex 
             bg={props.color} 
             color={props.textColor} 
+            h='70px'
             px='6' 
             py='2' 
-            borderRadius='15' 
+            borderRadius='full' 
             border={props.iconRequired ? '1px' : '0px'} 
             borderColor={props.iconRequired ? props.textColor : props.color}
         >
             {props.iconRequired 
             ?
                 <Center w='35px' h='full'>
-                    <Icon ico={faGlobe} />
+                    <Icon ico={faGlobe} size='1x' />
                 </Center> 
             : null
             }
